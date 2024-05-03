@@ -3,6 +3,7 @@
 **Irrigation Data Distribution System**
 
 ## Description
+This repo is a part of a coursework project done between 2022 and 2023.
 This repository contains a Python-based network application that uses both TCP and UDP multicast sockets to distribute data regarding nitrate and phosphate levels within an irrigation system. The project includes four main components:
 1. **Server**: Sends irrigation data to connected clients.
 2. **Node Receiver 1**: Receives data from the server, processes it, and forwards it via multicast.
@@ -43,26 +44,3 @@ Each script corresponds to a separate file in the repository:
 - `node_receiver1.py` for Node Receiver 1.
 - `node_receiver2.py` for Node Receiver 2.
 - `central_node.py` for the Central Node.
-
-## Contributing
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature')
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-Your Name - [your-email@example.com](mailto:your-email@example.com)
-
-## Acknowledgments
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc.
