@@ -1,6 +1,4 @@
-
-# Project Title
-**Irrigation Data Distribution System**
+# Irrigation Data Distribution System
 
 ## Description
 This repo is a part of a coursework project done between 2022 and 2023.
