@@ -4,7 +4,7 @@
 
 ## Description
 This repo is a part of a coursework project done between 2022 and 2023.
-This repository contains a Python-based network application that uses both TCP and UDP multicast sockets to distribute data regarding nitrate and phosphate levels within an irrigation system. The project includes four main components:
+It contains a Python-based network application that uses both TCP and UDP multicast sockets to distribute data regarding nitrate and phosphate levels within an irrigation system. The project includes four main components:
 1. **Server**: Sends irrigation data to connected clients.
 2. **Node Receiver 1**: Receives data from the server, processes it, and forwards it via multicast.
 3. **Node Receiver 2**: Similar to Node Receiver 1, but operates on different ports and potentially serves a different segment of the network.
