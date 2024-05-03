@@ -16,8 +16,8 @@ Each node not only relays data but also performs local computations to determine
 To get this project running on your local machine, follow these steps:
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/yourprojectname.git
-cd yourprojectname
+git clone https://github.com/niks-yad/CN_Project
+cd CN_Project
 
 # No additional dependencies are required, as the code uses standard Python libraries.
 ```
