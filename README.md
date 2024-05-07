@@ -1,5 +1,5 @@
 # Irrigation Data Distribution System
-This repo is a part of a coursework project done between 2022 and 2023.
+This repo is a part of a college coursework project done between 2022 and 2023.
 
 ## Description
 This repository contains a Python-based network application that uses both TCP and UDP multicast sockets to distribute data regarding nitrate and phosphate levels within an irrigation system. The project includes four main components:
