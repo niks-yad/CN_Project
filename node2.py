@@ -18,14 +18,14 @@ my_levels = {"Nitrate Level":1360,"Phosphate Level":1600}
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP) # seperate socket for UDP Multicasting
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Providing socket paramters to define socket behaviour
 
-if IS_ALL_GROUPS:                   # Conditional binding of socket
+if IS_ALL_GROUPS:                   # Conditional binding of the socket
     # on this port, receives ALL multicast groups
     sock.bind(('', MCAST_PORT))
-    print("1.ALL Multicast succesfull")
+    print("1.ALL Multicast successful")
 else:
     # on this port, listen ONLY to MCAST_GRP
     sock.bind((MCAST_GRP, MCAST_PORT))
-    print("1.Only MCAST_GRP succesful")
+    print("1.Only MCAST_GRP successful")
 
 mreq = struct.pack("4sl", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY) # Message request needed for the multicast recieving
 if mreq:
@@ -54,7 +54,7 @@ while True:
             else:
                 print("Allowing Irrigation\n")
             # print("Recieved data, Relaying the same\n")
-            sender_sock.sendto(pickle.dumps(data), (MCAST_GRP, MCAST_PORT_2)) # Using the UDP broadcasting socket to broadcast the recieved data
+            sender_sock.sendto(pickle.dumps(data), (MCAST_GRP, MCAST_PORT_2)) # Using the UDP broadcasting socket to broadcast the received data
             time_start = time.localtime(time.time())
             if time_start.tm_hour - time.localtime(time.time()).tm_hour >1:
                 print("\nTIMEOUT ALERT. Please check node 2\n")
