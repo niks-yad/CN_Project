@@ -27,7 +27,7 @@ else:
     sock.bind((MCAST_GRP, MCAST_PORT))
     print("1.Only MCAST_GRP succesful")
 
-mreq = struct.pack("4sl", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY) # Message request needed for the mulitcast recieving
+mreq = struct.pack("4sl", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY) # Message request needed for the multicast recieving
 if mreq:
     print("2.MREQ Done")
 
