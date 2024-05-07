@@ -1,13 +1,13 @@
 import socket # Needed for creating and working with sockets
 import struct # Multicast requires byte objects and struct package offers functions to achieve the same
 import sys     # Required for exiting loops based on keyboard interrupt
-import pickle # Needed as the data is being sent and recieved in the form json
+import pickle # Needed as the data is being sent and received in the form json
 import time
 
 MCAST_GRP = '224.1.1.1' # Multicast Group 
 MCAST_PORT = 34001       # Port for Multicast receiving
-IS_ALL_GROUPS = True    # Boolean value to check if the port needs to be bound to group or all kinds of broadcast
-MULTICAST_TTL = 3       # Time to live for multicast- Controls the number of hops for packet.
+IS_ALL_GROUPS = True    # Boolean value to check if the port needs to be bound to a group or all kinds of broadcast
+MULTICAST_TTL = 3       # Time to live for multicast- Controls the number of hops for the packet.
 time_start = time.localtime(time.time())  
 
 
