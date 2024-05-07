@@ -27,7 +27,7 @@ else:
     sock.bind((MCAST_GRP, MCAST_PORT))
     print("1.Only MCAST_GRP successful")
 
-mreq = struct.pack("4sl", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY) # Message request needed for the multicast recieving
+mreq = struct.pack("4sl", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY) # Message request needed for the multicast receiving
 if mreq:
     print("2.MREQ Done")
 
@@ -53,7 +53,7 @@ while True:
                 print("Excess Nitrate Content. Blocking Nozzle\n")
             else:
                 print("Allowing Irrigation\n")
-            # print("Recieved data, Relaying the same\n")
+            # print("Received data, Relaying the same\n")
             sender_sock.sendto(pickle.dumps(data), (MCAST_GRP, MCAST_PORT_2)) # Using the UDP broadcasting socket to broadcast the received data
             time_start = time.localtime(time.time())
             if time_start.tm_hour - time.localtime(time.time()).tm_hour >1:
